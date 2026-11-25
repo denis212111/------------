@@ -5,50 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Идеи для встреч и выходных в Москве">
   <title>Куда сегодня? — афиша Москвы</title>
-  <link rel="stylesheet" href="./style.css">
-  <script type="module" src="./app.js"></script>
 </head>
 <body>
-  <header class="top wrap">
-    <a class="brand" href="./">куда<span>?</span></a>
-    <nav aria-label="Навигация"><a href="#places">Афиша</a><a href="#business">Для бизнеса</a></nav>
-  </header>
-  <main class="wrap">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="city">Москва · Басманный район</p>
-        <h1>Куда<br>сегодня<span>?</span></h1>
-        <p>Керамика, выставки и кофе с друзьями. Найди план на вечер или выходные.</p>
-        <a class="button" href="#places">Смотреть афишу</a>
-      </div>
-    </section>
-    <section id="places" class="section">
-      <h2>Выбрать план</h2>
-      <p class="muted">Демо-афиша с примерами мест, цен и расписания.</p>
-      <div class="filters" aria-label="Фильтры афиши">
-        <button data-filter="today" aria-pressed="false">Сегодня</button>
-        <button data-filter="weekend" aria-pressed="false">На выходных</button>
-        <button data-filter="budget" aria-pressed="false">До 1 000 ₽</button>
-        <button data-filter="group" aria-pressed="false">Для компании</button>
-      </div>
-      <p id="results" class="muted" aria-live="polite"></p>
-      <div class="grid" id="cards"></div>
-    </section>
-    <section id="business" class="section business">
-      <div><h2>Для бизнеса</h2><p>Расскажите о своём месте или событии. Рекламная карточка появится в подходящей подборке с пометкой «Реклама».</p><p class="muted">В демоверсии заявка сохраняется в этом браузере.</p></div>
-      <form id="application">
-        <label>Название места<input name="venue" maxlength="100" required></label>
-        <label>Email для связи<input name="email" type="email" maxlength="150" required></label>
-        <label>Что хотите разместить<textarea name="offer" rows="3" maxlength="1000" required></textarea></label>
-        <button class="button" type="submit">Сохранить черновик</button>
-        <p id="form-status" role="status"></p>
-      </form>
-    </section>
-  </main>
-  <footer class="wrap footer">Куда сегодня? · Демо-афиша Москвы</footer>
-  <dialog id="details" aria-labelledby="details-title">
-    <form method="dialog"><button class="close" aria-label="Закрыть">×</button></form>
-    <div id="details-content"></div>
-  </dialog>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
